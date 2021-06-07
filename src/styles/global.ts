@@ -5,7 +5,7 @@ export const GlobalStyle = createGlobalStyle`
     --background: #F0F2F5;
     --red: #E52E4D;
     --blue-light: #41d3be;
-    --blue: #7C3AED;
+    --violet: #7C3AED;
     --green: #10B981;
     --white: #FFFFFF;
     --gray-500: #6B7280;
@@ -35,10 +35,6 @@ body {
 body, input, button {
     font-family: 'Poppins', sans-serif;
     font-weight: 400;
-}
-
-h1, h2, h3, h4, h5, h6 {
-    font-weight: 600;
 }
 
 button {
