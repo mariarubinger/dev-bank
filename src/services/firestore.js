@@ -19,5 +19,13 @@ export const authenticateAnonymously = () => {
     return firebase.auth().signInAnonymously();
 };
 
- 
+export const createUser = (name, email, password) => {
+    return db.collection('users')
+    .add({
+        name: name,
+        email: email,
+        password: password       
+    });
+};
+
 export default firebase;
