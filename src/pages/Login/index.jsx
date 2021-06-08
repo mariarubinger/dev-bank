@@ -1,8 +1,31 @@
+import * as FirestoreService from '../../services/firestore';
 import { Header } from '../../components/Header';
 import { Container, Content, Card } from './styles';
+import { useState } from 'react';
 import Img from '../../assets/image/img-login.png';
 
-export default function SignInButton({email, setEmail, password, setPassword}){
+export default function Login(){
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
+
+    function SearchForUser(e){
+        if(!email || !password) return;
+        e.preventDefault();
+        
+        let verify = FirestoreService.getUser(email, password);
+        let error = 1;
+        verify.then(users => {           
+            users.forEach((doc) => {    
+                error =0; 
+                console.log(doc.data().name);    
+                //redirect
+            });
+            if(error == 1){
+                console.log('usuario não encontrado');
+            }           
+        })
+    }
+    
     return(
         <>
         <Header />
@@ -24,7 +47,7 @@ export default function SignInButton({email, setEmail, password, setPassword}){
                     />
                     <button
                         type="submit"
-                        /* onClick={} */>
+                        onClick={SearchForUser}>
                         Acessar
                     </button>  
                 </Card>

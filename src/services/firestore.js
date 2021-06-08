@@ -28,4 +28,11 @@ export const createUser = (name, email, password) => {
     });
 };
 
+export const getUser = (email, password) => { 
+    return db.collection('users')
+    .where("email", "==", email)
+    .where("password", "==", password)
+    .get()
+};
+
 export default firebase;
