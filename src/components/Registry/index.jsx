@@ -8,7 +8,7 @@ export function Registry(){
     const [password, setPassword] = useState('');
 
     function addUser(e){
-      if(!name || !email || !password) return;
+    if(!name || !email || !password) return;
         e.preventDefault();  
         FirestoreService.createUser(name, email, password);
         setName('');
@@ -19,7 +19,6 @@ export function Registry(){
     return(
         <Container>
             <Content>
-                <h1>O banco feito especialmente para <span>Desenvolvedores</span></h1>
                 <Card>
                     <h3>Crie sua conta</h3>
                     <input

@@ -20,20 +20,4 @@ export const Content = styled.div`
         font-weight: 700;
         color: var(--white);
     }
-
-    button {
-        font-size: 1rem;
-        color: #FFFF;
-        background: var(--violet);
-        border: 0;
-        padding: 0 30px;
-        border-radius: 6px;
-        height: 40px;
-
-        transition: filter 0.2s;
-
-        &:hover {
-        filter: brightness(0.9);
-        }
-    }
 `;

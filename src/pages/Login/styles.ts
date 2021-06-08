@@ -7,6 +7,7 @@ export const Container = styled.div`
 export const Content = styled.div`
     max-width: 1120px;
     margin: 0 auto;
+    padding: 0 50px 0 50px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -23,9 +24,9 @@ export const Content = styled.div`
 `;
 
 export const Card = styled.div`
-    height: 350px;
-    width: 500px;
-    padding: 16px;
+    height: 300px;
+    width: 350px;
+    padding: 15px;
     background-color: #FFFFFF;
     border-radius: 5px;
     box-shadow: 1px 1px 3px #CCCCCC;
@@ -36,6 +37,7 @@ export const Card = styled.div`
 
     h3 {
         color: var(--gray-500);
+ 
     }
 
     input {
@@ -48,11 +50,11 @@ export const Card = styled.div`
     }
 
     button {
-        font-size: 16px;
+        font-size: 1rem;
         color: #FFFF;
         background: var(--violet);
         border: 0;
-        padding: 0 20px;
+        padding: 0 30px;
         border-radius: 6px;
         height: 40px;
 

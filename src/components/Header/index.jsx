@@ -4,10 +4,7 @@ export function Header(){
     return (
     <Container>
         <Content>
-            <div>
-                <title>DevBank</title>
-            </div>
-            <button type="button">Login</button>          
+            <title>DevBank</title>
         </Content>
     </Container>
     );
