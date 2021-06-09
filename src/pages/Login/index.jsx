@@ -2,8 +2,10 @@ import * as FirestoreService from '../../services/firestore';
 import { Container, Content, Card } from './styles';
 import { useState } from 'react';
 import Img from '../../assets/image/img-login.png';
+import { useHistory } from 'react-router';
 
 export default function Login(){
+    const history = useHistory();
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
 
@@ -17,7 +19,7 @@ export default function Login(){
             users.forEach((doc) => {    
                 error =0; 
                 console.log(doc.data().name);    
-                //redirect
+                history.push('/Dashboard');
             });
             if(error == 1){
                 console.log('usuario não encontrado');
