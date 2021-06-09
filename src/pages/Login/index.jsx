@@ -18,10 +18,12 @@ export default function Login(){
         verify.then(users => {           
             users.forEach((doc) => {    
                 error =0; 
-                console.log(doc.data().name);    
+                localStorage.setItem('name', (doc.data().name));
+                localStorage.setItem('id', (doc.data().id));
+
                 history.push('/Dashboard');
             });
-            if(error == 1){
+            if(error === 1){
                 console.log('usuario não encontrado');
             }           
         })

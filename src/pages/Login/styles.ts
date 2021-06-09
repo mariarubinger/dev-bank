@@ -11,16 +11,6 @@ export const Content = styled.div`
     display: flex;
     align-items: center;
     justify-content: space-between;
-
-    h1 {
-        color: var(--gray-700);
-        font-size: 40px;
-        align-self: center;
-
-        span{
-        color: var(--violet);
-        }
-    }
 `;
 
 export const Card = styled.div`
@@ -37,7 +27,7 @@ export const Card = styled.div`
 
     h3 {
         color: var(--gray-500);
- 
+        font-size: 16px;
     }
 
     input {
@@ -61,7 +51,7 @@ export const Card = styled.div`
         transition: filter 0.2s;
 
         &:hover {
-        filter: brightness(0.9);
+            filter: brightness(0.9);
         }
     }
 `;
