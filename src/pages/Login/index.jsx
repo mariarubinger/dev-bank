@@ -1,5 +1,4 @@
 import * as FirestoreService from '../../services/firestore';
-import { Header } from '../../components/Header';
 import { Container, Content, Card } from './styles';
 import { useState } from 'react';
 import Img from '../../assets/image/img-login.png';
@@ -28,7 +27,6 @@ export default function Login(){
     
     return(
         <>
-        <Header />
         <Container>
             <Content>
                 <Card>
@@ -51,7 +49,7 @@ export default function Login(){
                         Acessar
                     </button>  
                 </Card>
-                  <img src={Img}/>
+                <img src={Img}/>
             </Content>
         </Container>
         </>
