@@ -47,6 +47,7 @@ export const Card = styled.div`
         padding: 0 30px;
         border-radius: 6px;
         height: 40px;
+        cursor: pointer;
 
         transition: filter 0.2s;
 

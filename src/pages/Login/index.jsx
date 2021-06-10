@@ -53,7 +53,7 @@ export default function Login(){
                         Acessar
                     </button>  
                 </Card>
-                <img src={Img}/>
+                <img src={Img} alt="imagem da página de login"/>
             </Content>
         </Container>
         </>
