@@ -4,16 +4,15 @@ import { Container, Content, CardBalance, CardTransactions, Sidebar } from './st
 import { useHistory } from 'react-router';
 
 function Dashboard() {
-    
-    function Logout() {
-        localStorage.clear();
-        history.push('/');
-    }
-    
     const history = useHistory();
     const [transactionsList, setTransactionsList] = useState([]); 
     const [balance, setBalance] = useState(0);
 
+    function Logout() {
+        localStorage.clear();
+        history.push('/');
+    }
+ 
         FirestoreService.authenticateAnonymously().then(userCredential => {           
         FirestoreService.getExtract((localStorage.getItem('id')))
         .then(transactions => {                      
