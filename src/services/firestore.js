@@ -35,4 +35,10 @@ export const getUser = (email, password) => {
     .get()
 };
 
+export const getExtract = (id) => {
+    return db.collection('transactions').where("userId", "==", id)
+    .get();
+};
+
+
 export default firebase;
